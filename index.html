@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Nallagorla Susmitha</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: black;
+      color: white;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    header {
+      text-align: center;
+      padding: 3rem 1rem;
+      position: relative;
+    }
+    header h1 { font-size: 2.5rem; }
+    header p { font-size: 1.2rem; margin: 0.5rem 0 1rem; }
+    nav a {
+      margin: 0 12px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+      cursor: pointer;
+    }
+    nav a:hover { color: #ff4081; }
+    section {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: rgba(255,255,255,0.05);
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(255,255,255,0.1);
+      display: none;
+    }
+    section.active { display: block; animation: fadeIn 0.8s ease; }
+    h2 { color: #ff4081; margin-bottom: 1rem; }
+    ul { list-style-type: none; }
+    ul li { margin: 0.5rem 0; }
+    .card {
+      background: rgba(255,255,255,0.1);
+      padding: 1.2rem;
+      margin-bottom: 1rem;
+      border-left: 5px solid #ff4081;
+      border-radius: 8px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 0 15px rgba(255,255,255,0.3);
+    }
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin: 1rem auto;
+      display: block;
+      border: 3px solid #ff4081;
+    }
+    .skills-list li::before {
+      content: "✔️ ";
+    }
+    .contact a { color: #ff4081; font-weight: bold; text-decoration: none; margin-right: 10px; }
+    .contact a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 1.5rem; background: #111; margin-top: 2rem; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(20px);} to { opacity: 1; transform: translateY(0);} }
+    /* Animated Background */
+    .background {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      z-index: -1;
+      background: linear-gradient(45deg, #000, #222);
+      overflow: hidden;
+    }
+    .background span {
+      position: absolute;
+      width: 20px; height: 20px;
+      background: rgba(255,255,255,0.2);
+      animation: move 20s linear infinite;
+      bottom: -150px;
+    }
+    @keyframes move {
+      0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+      100% { transform: translateY(-1200px) rotate(720deg); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="background">
+    <span></span><span></span><span></span><span></span><span></span>
+  </div>
+  <header>
+    <img src="IMG_20230427_003826_972.jpg" alt="Profile Picture" class="profile-pic">
+    <h1>Nallagorla Susmitha</h1>
+    <p>Computer Science Graduate | Data Analyst Enthusiast</p>
+    <nav>
+      <a onclick="showSection('about')">About</a>
+      <a onclick="showSection('skills')">Skills</a>
+      <a onclick="showSection('projects')">Projects</a>
+      <a onclick="showSection('experience')">Experience</a>
+      <a onclick="showSection('education')">Education</a>
+      <a onclick="showSection('certifications')">Certifications</a>
+      <a onclick="showSection('contact')">Contact</a>
+    </nav>
+  </header>
+
+  <section id="about" class="active">
+    <h2>About Me</h2>
+    <p>Analytical and detail-oriented Computer Science graduate with hands-on experience in Python, SQL, Pandas, and machine learning. Built real-world projects including a water quality prediction system and interactive dashboards. Eager to apply data analysis skills in a professional environment to generate actionable insights.</p>
+  </section>
+
+  <section id="skills">
+  <h2>Technical Skills 💻</h2>
+  <ul class="skills-list">
+    <li>Languages: Python 🐍, Java ☕, HTML 🌐, CSS 🎨
+      <br><span style="color:#ff4081;">Usage:</span> Built ML models, web dashboards, and interactive websites.
+    </li>
+    <li>Analytics Tools: Pandas, NumPy ➗, Excel 📊
+      <br><span style="color:#ff4081;">Usage:</span> Cleaned and analyzed large datasets, created visualizations, automated reports.
+    </li>
+    <li>Databases: MySQL 🗄️, SQL, DBMS
+      <br><span style="color:#ff4081;">Usage:</span> Designed and queried databases for project data storage and retrieval.
+    </li>
+    <li>Tools: VS Code 💡, Eclipse, Google Cloud ☁️, Git/GitHub
+      <br><span style="color:#ff4081;">Usage:</span> Version control, cloud deployment, collaborative coding.
+    </li>
+    <li>Other Skills: Data Cleaning 🧹, Interpretation, Logical Reasoning 🧠, Teamwork 🤝, Adaptability
+      <br><span style="color:#ff4081;">Usage:</span> Worked in teams, solved real-world problems, adapted to new technologies.
+    </li>
+  </ul>
+  <div style="margin-top:1rem;">
+    <strong>What I Learned:</strong>
+    <ul>
+      <li>🔍 <em>Python & Pandas:</em> Efficient data wrangling and analysis for actionable insights.</li>
+      <li>📊 <em>Excel & Power BI:</em> Creating dashboards and automating business reports.</li>
+      <li>🗄️ <em>SQL:</em> Writing optimized queries for fast data retrieval.</li>
+      <li>☁️ <em>Cloud Tools:</em> Deploying projects and collaborating remotely.</li>
+      <li>🤝 <em>Teamwork:</em> Communicating ideas and solving challenges together.</li>
+    </ul>
+  </div>
+</section>
+
+  <section id="projects">
+    <h2>Projects 🚀</h2>
+    <div class="card">
+      <h3>AquaVue: Water Quality Prediction System</h3>
+      <img src="waterqt.png"alt="Project Screenshot" style="width:50%; border-radius:8px; margin:0.5rem 0;">
+      <p>Developed ML models (XGBoost, GBM) with 90%+ accuracy to classify water quality. Built a dashboard for real-time alerts and visualizations using Matplotlib.</p>
+    </div>
+    <div class="card">
+      <h3>IPL / Sports Analytics</h3>
+      <img src="ipl_db.png" alt="Project Screenshot" style="width:100%; border-radius:8px; margin:0.5rem 0;">
+      <p>Analyzed match data to identify successful teams, players, and patterns. Explored toss impact, venue-wise trends, and presented insights with Python, Excel, and Power BI.</p>
+    </div>
+    <div class="card">
+      <h3>Zomato_Data_Analyst</h3>
+      <img src="Zomato.png"alt="Project Screenshot" style="width:100%; border-radius:8px; margin:0.5rem 0;">
+      <p>Performed EDA on restaurant data using Python (Pandas, NumPy, Matplotlib, Seaborn) to analyze ratings, cuisines, and customer preferences. Built visualizations and insights to support business decision-making.</p>
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2>Professional Experience 💼</h2>
+    <div class="card">
+      <h3>Data Visualization Intern– SaiKet Systems!</h3>
+      <!-- <img src="exp2.jpg" alt="Experience Image" style="width:100%; border-radius:8px; margin:0.5rem 0;"> -->
+      <p><em>Jul 2025</em><br>Telco Customer Churn Analysis – Analyzed churn patterns using Python and Excel by exploring gender-wise churn, tenure, and monthly charges. Built visualizations (heatmaps, histograms) to provide insights for improving customer retention.</p>
+    </div>
+    <div class="card">
+      <h3>Cybersecurity Intern – SlashMark</h3>
+      <!-- <img src="exp1.jpg" alt="Experience Image" style="width:100%; border-radius:8px; margin:0.5rem 0;"> -->
+      <p><em>Nov 2024 – Apr 2025</em><br>Interpreted security logs and structured event data for pattern analysis. Automated reporting with Excel and Python.</p>
+    </div>
+    <div class="card">
+      <h3>Web Development & JavaScript Intern – ExcelR Solutions</h3>
+      <!-- <img src="exp2.jpg" alt="Experience Image" style="width:100%; border-radius:8px; margin:0.5rem 0;"> -->
+      <p><em>Jul 2024 – Sep 2024</em><br>Built a weather-based dashboard using JavaScript and PostgreSQL. Used RESTful APIs and implemented authentication.</p>
+    </div>
+
+  </section>
+
+  <section id="education">
+    <h2>Education 🎓</h2>
+    <!-- <img src="edu.jpg" alt="Education Image" style="width:100%; border-radius:8px; margin:0.5rem 0;"> -->
+    <ul>
+      <li>B.Tech – CSE: CGPA 7.82/10, AITS Tirupati (2025)</li>
+      <li>Diploma – ECE: CGPA 7.54/10, Govt. Polytechnic for Women, Nellore (2022)</li>
+      <li>SSC – EM: 87%, ZPPH SCHOOL,Gundemadakala (2019)</li>
+    </ul>
+  </section>
+
+  <section id="certifications">
+  <h2>Certifications 📜</h2>
+  <!-- <img src="certs.jpg" alt="Certifications Image" style="width:100%; border-radius:8px; margin:0.5rem 0;"> -->
+  <ul>
+    <li>Cybersecurity Analyst – Tata
+      <br><span style="color:#ff4081;">Learned:</span> Security log analysis, threat detection, reporting automation. 🛡️
+    </li>
+    <li>Data Analytics & Visualization – Accenture
+      <br><span style="color:#ff4081;">Learned:</span> Data cleaning, dashboard creation, presenting insights. 📈
+    </li>
+    <li>Introduction to Cloud – Datacom
+      <br><span style="color:#ff4081;">Learned:</span> Basics of cloud computing, deploying web apps. ☁️
+    </li>
+    <li>Google Cybersecurity – Google
+      <br><span style="color:#ff4081;">Learned:</span> Cybersecurity fundamentals, risk management, best practices. 🔒
+    </li>
+  </ul>
+  <div style="margin-top:1rem;">
+    <strong>Certifications Usage:</strong>
+    <ul>
+      <li>🛡️ Applied cybersecurity skills in internship projects for log analysis.</li>
+      <li>📈 Used analytics and visualization skills to build dashboards and reports.</li>
+      <li>☁️ Leveraged cloud knowledge for deploying and sharing projects.</li>
+    </ul>
+  </div>
+</section>
+
+  <section id="contact" class="contact">
+    <h2>Contact 📬</h2>
+    <!-- <img src="contact.jpg" alt="Contact Image" style="width:100%; border-radius:8px; margin:0.5rem 0;"> -->
+    <p>📍 Gundemadakala, Vinjamur, Nellore, Andhra Pradesh – 524228</p>
+    <p>📞 <a href="tel:+916302870669">+91 6302870669</a></p>
+    <p>📧 <a href="mailto:susmithanallagorla2004@gmail.com">susmithanallagorla2004@gmail.com</a></p>
+    <p>🔗 <a href="https://github.com/Yadav-susmitha">GitHub</a> | <a href="https://www.linkedin.com/in/susmitha-nallagorla-17a07b230">LinkedIn</a> | <a href="https://www.hackerrank.com/profile/susmithanallago1">HackerRank</a> | <a href="https://leetcode.com/u/SkoumHWxgs">LeetCode</a></p>
+  </section>
+
+  <footer>
+    <p>© 2025 Nallagorla Susmitha | Portfolio Website</p>
+  </footer>
+
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('section').forEach(sec => sec.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+    // Create floating background elements
+    const background = document.querySelector('.background');
+    for(let i=0; i<20; i++) {
+      let span = document.createElement('span');
+      span.style.left = Math.random() * window.innerWidth + 'px';
+      span.style.animationDuration = 10 + Math.random()*20 + 's';
+      span.style.opacity = Math.random();
+      span.style.width = span.style.height = 5+Math.random()*15+'px';
+      background.appendChild(span);
+    }
+  </script>
+</body>
+</html>
