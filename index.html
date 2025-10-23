@@ -89,6 +89,22 @@
       0% { transform: translateY(0) rotate(0deg); opacity: 1; }
       100% { transform: translateY(-1200px) rotate(720deg); opacity: 0; }
     }
+    .resume-btn {
+  display: inline-block;
+  background-color: #ff4081;
+  color: white;
+  padding: 10px 25px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+  box-shadow: 0 0 10px rgba(255, 64, 129, 0.3);
+}
+.resume-btn:hover {
+  background-color: #ff1a6b;
+  box-shadow: 0 0 15px rgba(255, 64, 129, 0.6);
+}
+
   </style>
 </head>
 <body>
@@ -111,9 +127,14 @@
   </header>
 
   <section id="about" class="active">
-    <h2>About Me</h2>
-    <p>Analytical and detail-oriented Computer Science graduate with hands-on experience in Python, SQL, Pandas, and machine learning. Built real-world projects including a water quality prediction system and interactive dashboards. Eager to apply data analysis skills in a professional environment to generate actionable insights.</p>
-  </section>
+  <h2>About Me</h2>
+  <p>Analytical and detail-oriented Computer Science graduate with hands-on experience in Python, SQL, Pandas, and machine learning. Built real-world projects including a water quality prediction system and interactive dashboards. Eager to apply data analysis skills in a professional environment to generate actionable insights.</p>
+  
+  <!-- Resume Download Button -->
+  <div style="text-align:center; margin-top:20px;">
+    <a href="Susmitha_Resume.pdf" download class="resume-btn">📄 Download Resume</a>
+  </div>
+</section>
 
   <section id="skills">
   <h2>Technical Skills 💻</h2>
@@ -253,4 +274,5 @@
   </script>
 </body>
 </html>
+
 
